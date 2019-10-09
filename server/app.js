@@ -1,3 +1,5 @@
+const { join } = require('path');
+const path = require('path');
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const router = require('./controllers');
@@ -17,6 +19,13 @@ app.use((error, req, res, next) => {
   console.log(error);
 
   res.status(500).send({ code: 500, error: 'Internal Server Error' });
+});
+
+app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+app.use('/api/v1', router);
+
+app.get('*', (req, res) => {
+  res.sendFile(join(__dirname, '..', 'client', 'build', 'index.html'));
 });
 
 module.exports = app;

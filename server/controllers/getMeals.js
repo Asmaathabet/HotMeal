@@ -2,6 +2,7 @@ const getMealsByCat = require('../database/queries/getMealsByCat');
 
 const getMeals = (req, res, next) => {
   let { category = 'main' } = req.query;
+
   if (category) category = category.toLowerCase();
   getMealsByCat(category)
     .then((result) => (result.rows.length

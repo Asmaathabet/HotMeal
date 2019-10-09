@@ -1,20 +1,24 @@
 const { Pool } = require('pg');
-require('env2')('config.env');
+require('env2')('./config.env');
 
-let dbURL;
+let dbUrl = '';
+
 switch (process.env.NODE_ENV) {
-  case 'dev':
-    dbURL = process.env.DB_URL;
+  case 'testing':
+    dbUrl = process.env.TESTING_DB;
     break;
-  case 'test':
-    dbURL = process.env.DB_TEST_URL;
+  case 'production':
+    dbUrl = process.env.DATABASE_URL;
+    break;
+  case 'development':
+    dbUrl = process.env.DEVELOPMENT_DB;
     break;
   default:
     throw new Error('No Database URL!!!');
 }
 
 const options = {
-  connectionString: dbURL,
+  connectionString: dbUrl,
   ssl: true,
 };
 

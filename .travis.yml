@@ -13,3 +13,5 @@ env:
 test: 
   adapter: postgresql
   database: hotmeal
+
+  
