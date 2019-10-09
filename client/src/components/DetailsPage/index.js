@@ -358,10 +358,9 @@ class Details extends React.Component {
 }
 
 Details.propTypes = {
-  item: PropTypes.isRequired,
-  state: PropTypes.isRequired,
   location: PropTypes.objectOf(PropTypes.any).isRequired,
   updateOrderMeals: PropTypes.func.isRequired,
   history: PropTypes.objectOf(PropTypes.any).isRequired,
 };
+
 export default Details;

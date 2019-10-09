@@ -10,6 +10,7 @@ const MealList = ({ data }) => {
     const listItems = data.map(item => {
       return (
         <Link
+          key={item.id}
           className="link"
           to={{
             pathname: '/details',
@@ -26,7 +27,8 @@ const MealList = ({ data }) => {
   }
   return '';
 };
+
 MealList.propTypes = {
-  data: PropTypes.isRequired,
+  data: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 export default MealList;

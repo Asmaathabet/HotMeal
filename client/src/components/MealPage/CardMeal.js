@@ -16,12 +16,14 @@ const CardMeal = ({ oneMeal: { img, name, short_desc: shortDesc, price } }) => (
     </div>
   </div>
 );
+
 CardMeal.propTypes = {
-  oneMeal: PropTypes.isRequired,
-  img: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  short_desc: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
+  oneMeal: PropTypes.shape({
+    img: PropTypes.string,
+    name: PropTypes.string,
+    short_desc: PropTypes.string,
+    price: PropTypes.number,
+  }).isRequired,
 };
 
 export default CardMeal;
