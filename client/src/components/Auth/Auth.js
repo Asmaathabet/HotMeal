@@ -8,7 +8,7 @@ class Auth extends React.Component {
     logedIn: false,
   };
 
-  componentWillMount() {
+  componentDidMount() {
     fetch('api/v1/auth')
       .then(res => res.json())
       .then(res => {
@@ -38,9 +38,10 @@ class Auth extends React.Component {
     return <div>{this.redirectTo()}</div>;
   }
 }
+
 Auth.propTypes = {
   history: propTypes.objectOf(propTypes.any).isRequired,
-  component: propTypes.objectOf(propTypes.any).isRequired,
+  component: propTypes.func.isRequired,
 };
 
 export default withRouter(Auth);

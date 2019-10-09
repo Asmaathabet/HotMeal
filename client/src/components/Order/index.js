@@ -178,7 +178,7 @@ export default class Order extends React.Component {
 Order.propTypes = {
   history: propTypes.objectOf(propTypes.any).isRequired,
   updateOrderMeals: propTypes.func.isRequired,
-  prevMeals: propTypes.arrayOf(Object).isRequired,
+  prevMeals: propTypes.arrayOf(propTypes.any).isRequired,
   tableNumber: propTypes.number.isRequired,
   meal: propTypes.isRequired,
 };
