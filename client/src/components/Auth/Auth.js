@@ -1,25 +1,24 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Redirect, withRouter } from 'react-router-dom';
 import propTypes from 'prop-types';
 
-export default class Auth extends React.Component {
+class Auth extends React.Component {
   state = {
     IsRedirect: false,
     logedIn: false,
   };
 
   componentWillMount() {
-    const { history } = this.props;
-    fetch('api/v1/auth', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-    })
+    fetch('api/v1/auth')
       .then(res => res.json())
       .then(res => {
         if (res.error) this.setState({ IsRedirect: true, logedIn: false });
         else this.setState({ IsRedirect: true, logedIn: true });
       })
-      .catch(() => history.push('/serverError'));
+      .catch(() => {
+        const { history } = this.props;
+        history.push('/serverError');
+      });
   }
 
   redirectTo = () => {
@@ -43,3 +42,5 @@ Auth.propTypes = {
   history: propTypes.objectOf(propTypes.any).isRequired,
   component: propTypes.objectOf(propTypes.any).isRequired,
 };
+
+export default withRouter(Auth);
