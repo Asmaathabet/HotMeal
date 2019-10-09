@@ -21,7 +21,6 @@ module.exports = Joi.object().keys({
       isChecKedA: Joi.boolean(),
       isChecKedC: Joi.boolean(),
       isChecKedB: Joi.boolean(),
-    })
-      .required(),
-  ),
+    }),
+  ).required(),
 });
