@@ -9,7 +9,7 @@ const isAuth = require('./isAuth');
 
 const router = express.Router();
 
-router.post('/auth', isAuth);
+router.get('/auth', isAuth);
 router.post('/login', login);
 router.use(auth);
 router.post('/post-feedback', postFeedback);
