@@ -133,3 +133,4 @@ then you should be able to go to [localhost](http://localhost:5000/) and view th
 * [Joi library](https://www.npmjs.com/package/joi) 
 * [React Library](https://reactjs.org/)
 * [JSON Web Token](https://jwt.io/introduction/)
+* [Refactor Documentation](https://docs.google.com/presentation/d/1sX1-VcikL7x4zOKbtqgB4JEJiaGbIqG0LGNptasGiw4/edit?usp=sharing)
