@@ -1,21 +1,20 @@
 .login__background--image {
   position: relative;
   width: 100%;
-  height: 98vh;
+  height: 100vh;
 }
 
 .login__waiter-image {
   position: absolute;
   width: 23vw;
-  height: 10vh;
-  left: 9rem;
+  left: 8.2rem;
   top: 15.5rem;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
 }
 
 .login__title {
   position: absolute;
-  left: 7.5rem;
+  left: 6.2rem;
   top: 10rem;
   font-family: Creepster;
   font-style: normal;
@@ -28,10 +27,10 @@
   position: absolute;
   left: 4rem;
   width: 38vw;
-  height: 2vh;
-  background-color: #21232F;
+  height: 4vh;
+  background-color: #212129;
   border: none;
-  color:#FFFFFF;
+  color: #FFFFFF;
   font: 1.2rem Roboto;
 }
 
@@ -43,27 +42,27 @@
 }
 
 .login__table-number {
-  top: 24.1rem;
+  top: 23.1rem;
 }
 
 .login__secret-number {
-  top: 28.2rem;
+  top: 27.2rem;
 }
 
 hr {
   position: absolute;
   width: 239px;
   height: 0px;
-  left: 4rem;
+  left: 2.9rem;
   border: 1px solid #FF9636;
 }
 
 .login__first-line {
-  top: 25.5rem;
+  top: 24.5rem;
 }
 
 .login__second-line {
-  top: 29.6rem;
+  top: 28.6rem;
 }
 
 .login__err-message {
@@ -81,8 +80,8 @@ hr {
   position: absolute;
   width: 66vw;
   height: 6vh;
-  left: 3.9rem;
-  top: 34.4rem;
+  left: 3.5rem;
+  top: 31.4rem;
   font-size: 1.5rem;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
